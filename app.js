@@ -18,7 +18,7 @@
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const isWeChat = /MicroMessenger/i.test(navigator.userAgent);
   const art = new Image();
-  art.src = "./assets/moon-night.webp";
+  art.src = "./assets/moon-festival.webp";
   let sendingTimer = 0;
 
   function setState(state) {
@@ -135,21 +135,21 @@
     const height = art.naturalHeight * scale;
     ctx.drawImage(art, (canvas.width - width) / 2, (canvas.height - height) / 2, width, height);
 
-    const shade = ctx.createLinearGradient(0, 790, 0, 1600);
-    shade.addColorStop(0, "rgba(7,15,24,0)");
-    shade.addColorStop(.24, "rgba(7,15,24,.64)");
-    shade.addColorStop(1, "rgba(7,15,24,.98)");
+    const shade = ctx.createLinearGradient(0, 700, 0, 1600);
+    shade.addColorStop(0, "rgba(42,8,12,0)");
+    shade.addColorStop(.24, "rgba(47,9,14,.68)");
+    shade.addColorStop(1, "rgba(37,7,12,.97)");
     ctx.fillStyle = shade;
-    ctx.fillRect(0, 790, 900, 810);
+    ctx.fillRect(0, 700, 900, 900);
 
-    ctx.strokeStyle = "rgba(239,209,151,.74)";
+    ctx.strokeStyle = "rgba(255,216,148,.84)";
     ctx.lineWidth = 2;
     ctx.strokeRect(36, 36, 828, 1528);
-    ctx.strokeStyle = "rgba(239,209,151,.4)";
+    ctx.strokeStyle = "rgba(255,216,148,.48)";
     ctx.strokeRect(49, 49, 802, 1502);
 
     ctx.textAlign = "center";
-    ctx.fillStyle = "#f1d8a4";
+    ctx.fillStyle = "#ffe2a7";
     ctx.font = '26px Georgia, serif';
     ctx.fillText("M O O N   L E T T E R", 450, 107);
     ctx.font = '62px "Songti SC", "Noto Serif CJK SC", "SimSun", serif';
@@ -157,21 +157,21 @@
     ctx.beginPath();
     ctx.moveTo(362, 974);
     ctx.lineTo(538, 974);
-    ctx.strokeStyle = "rgba(239,209,151,.78)";
+    ctx.strokeStyle = "rgba(255,216,148,.85)";
     ctx.lineWidth = 2;
     ctx.stroke();
 
     const lines = wrapText(ctx, wish, 700, 49);
-    ctx.fillStyle = "#f8efdd";
+    ctx.fillStyle = "#fff0d5";
     ctx.font = '49px "Songti SC", "Noto Serif CJK SC", "SimSun", serif';
     const lineHeight = 78;
     const firstY = 1072 + Math.max(0, 3 - lines.length) * 27;
     lines.forEach((line, index) => ctx.fillText(line, 450, firstY + index * lineHeight));
 
-    ctx.fillStyle = "#e3c894";
+    ctx.fillStyle = "#ffd99b";
     ctx.font = '30px "Songti SC", "Noto Serif CJK SC", "SimSun", serif';
     ctx.fillText(signature ? `—— ${signature}` : "—— 一个惦记你的人", 450, 1440);
-    ctx.fillStyle = "rgba(248,239,221,.72)";
+    ctx.fillStyle = "rgba(255,236,204,.82)";
     ctx.font = '26px "Songti SC", "Noto Serif CJK SC", "SimSun", serif';
     ctx.fillText("中 秋 · 愿 所 念 皆 有 回 响", 450, 1523);
     return canvas.toDataURL("image/png");
@@ -229,7 +229,7 @@
       skyCtx.clearRect(0, 0, width, height);
       for (const star of stars) {
         skyCtx.globalAlpha = .25 + .38 * (1 + Math.sin(star.phase + time * .0007 * star.speed)) / 2;
-        skyCtx.fillStyle = "#fff0cc";
+        skyCtx.fillStyle = "#ffe9b5";
         skyCtx.beginPath();
         skyCtx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
         skyCtx.fill();
@@ -238,7 +238,7 @@
         const x = petal.x + Math.sin(petal.phase + time * .0003) * 12;
         const y = (petal.y + time * petal.speed * .018) % (height + 12);
         skyCtx.globalAlpha = .52;
-        skyCtx.fillStyle = "#e7bb72";
+        skyCtx.fillStyle = "#f5c46e";
         skyCtx.beginPath();
         skyCtx.ellipse(x, y, petal.r, petal.r * .6, time * .0003, 0, Math.PI * 2);
         skyCtx.fill();
