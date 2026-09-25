@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101925">
+  <meta name="description" content="写一封月光来信，让祝福随孔明灯升起。中秋快乐。">
+  <title>把月光寄给你 · 中秋月笺</title>
+  <link rel="preload" href="./assets/moon-night.webp" as="image" type="image/webp">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="scene" aria-hidden="true"></div>
+  <canvas id="sky" aria-hidden="true"></canvas>
+
+  <div class="app" id="app" data-state="intro">
+    <header class="masthead">
+      <div class="brand-mark" aria-hidden="true">月</div>
+      <div class="brand-copy"><span>中秋月笺</span><small>MOON LETTER</small></div>
+      <span class="masthead-note">共此时 · 共明月</span>
+    </header>
+
+    <main>
+      <section class="screen intro-screen" aria-labelledby="introTitle">
+        <div class="intro-content">
+          <span class="section-kicker"><span class="kicker-line"></span> 一封写给思念的信</span>
+          <h1 id="introTitle">把月光<br><em>寄给你</em></h1>
+          <p>今晚的月亮很圆。写一句心里的话，<br>让它替你，照亮远方的人。</p>
+          <button class="primary-button" id="enterButton" type="button">
+            <span>轻触，写一封月笺</span><span class="button-arrow" aria-hidden="true">↗</span>
+          </button>
+          <div class="intro-footnote">中秋 · 愿所念皆有回响</div>
+        </div>
+      </section>
+
+      <section class="screen compose-screen" aria-labelledby="composeTitle">
+        <div class="compose-content">
+          <div class="compose-heading">
+            <span class="section-kicker"><span class="kicker-line"></span> 月光来信 / 01</span>
+            <h2 id="composeTitle">今夜，想对谁说？</h2>
+            <p>把一句祝福交给月亮。</p>
+          </div>
+          <form class="letter-form" id="wishForm" novalidate>
+            <label class="field-label" for="wishInput">你想说的话</label>
+            <textarea id="wishInput" name="wish" maxlength="40" rows="3" placeholder="愿你所行皆坦途，所念皆可期……" aria-describedby="wishHelp" required></textarea>
+            <div class="field-meta"><span id="wishHelp">写下 1—40 字的祝福</span><span id="wishCount">0 / 40</span></div>
+            <div class="signature-row">
+              <label for="signatureInput">落款 <span>（选填）</span></label>
+              <input id="signatureInput" name="signature" maxlength="10" type="text" placeholder="一个惦记你的人" autocomplete="off">
+            </div>
+            <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+            <button class="primary-button send-button" id="sendButton" type="submit">
+              <span>寄出这份祝福</span><span class="button-arrow" aria-hidden="true">↗</span>
+            </button>
+            <p class="privacy-note">只在这台设备生成，不会上传你的文字</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <div class="result-overlay" id="resultOverlay" role="dialog" aria-modal="true" aria-labelledby="resultTitle" aria-hidden="true">
+      <div class="result-content">
+        <div class="result-heading"><span class="section-kicker">月光已寄达</span><h2 id="resultTitle">愿所念之人，共赏此月</h2></div>
+        <div class="card-frame"><img id="cardImage" alt="你生成的中秋祝福图片，可长按保存" draggable="false"></div>
+        <p class="save-hint" id="saveHint">长按图片保存，再发给想念的人</p>
+        <div class="result-actions">
+          <a class="primary-button download-button" id="downloadButton" href="#" download="中秋月笺.png"><span>保存祝福图片</span><span class="button-arrow" aria-hidden="true">↓</span></a>
+          <button class="text-button" id="againButton" type="button">再写一封</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-credit">月光有信 · 改编自 <a href="https://gitcode.com/gcw_gDYn9EmA/keshangkao" target="_blank" rel="noopener noreferrer">keshangkao</a></footer>
+  </div>
+</body>
+</html>
