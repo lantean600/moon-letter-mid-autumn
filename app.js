@@ -18,7 +18,7 @@
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const isWeChat = /MicroMessenger/i.test(navigator.userAgent);
   const art = new Image();
-  art.src = "./assets/moon-festival.webp";
+  art.src = "./assets/moon-festival.webp?v=3";
   let sendingTimer = 0;
 
   function setState(state) {
@@ -136,9 +136,9 @@
     ctx.drawImage(art, (canvas.width - width) / 2, (canvas.height - height) / 2, width, height);
 
     const shade = ctx.createLinearGradient(0, 700, 0, 1600);
-    shade.addColorStop(0, "rgba(42,8,12,0)");
-    shade.addColorStop(.24, "rgba(47,9,14,.68)");
-    shade.addColorStop(1, "rgba(37,7,12,.97)");
+    shade.addColorStop(0, "rgba(30,28,23,0)");
+    shade.addColorStop(.24, "rgba(33,30,25,.66)");
+    shade.addColorStop(1, "rgba(24,23,19,.97)");
     ctx.fillStyle = shade;
     ctx.fillRect(0, 700, 900, 900);
 

@@ -1,28 +1,28 @@
-:root{--night:#351417;--night-deep:#210b0e;--vermilion:#b9402d;--gold:#e4b66d;--gold-light:#ffe0a1;--ivory:#fff1dd;--muted:#e7cbb2;--hairline:rgba(248,208,137,.38)}
+:root{--night:#25231e;--night-deep:#1b1a17;--vermilion:#8c4a39;--gold:#d2a869;--gold-light:#f2d59b;--ivory:#f8eedb;--muted:#d7c7a9;--hairline:rgba(226,194,137,.34)}
 *{box-sizing:border-box}
 html{background:var(--night);scroll-behavior:smooth}
 body{margin:0;min-width:280px;color:var(--ivory);font-family:"Songti SC","Noto Serif CJK SC","Source Han Serif SC","SimSun",serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 button,input,textarea{font:inherit}
 button{cursor:pointer}
 button:focus-visible,a:focus-visible,textarea:focus-visible,input:focus-visible{outline:2px solid var(--gold-light);outline-offset:4px}
-.scene{position:fixed;inset:0;background:var(--night) url("./assets/moon-festival.webp") center center/cover no-repeat;z-index:0}
-.scene::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(49,9,12,.04) 4%,rgba(48,8,11,.02) 35%,rgba(57,13,17,.19) 53%,rgba(44,10,15,.56) 76%,rgba(31,8,12,.94) 100%)}
+.scene{position:fixed;inset:0;background:var(--night) url("./assets/moon-festival.webp?v=3") center center/cover no-repeat;z-index:0}
+.scene::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(25,23,18,.03) 4%,rgba(27,25,20,.02) 35%,rgba(31,28,22,.18) 53%,rgba(30,27,22,.57) 76%,rgba(23,22,18,.95) 100%)}
 #sky{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
 .app{position:relative;z-index:2;min-height:100svh;isolation:isolate}
 .masthead{position:absolute;top:0;left:0;right:0;z-index:5;max-width:1160px;margin:auto;display:flex;align-items:center;gap:11px;padding:calc(23px + env(safe-area-inset-top)) clamp(23px,5vw,55px) 0}
-.brand-mark{width:35px;height:35px;display:grid;place-items:center;border:1px solid rgba(255,221,155,.85);box-shadow:inset 0 0 0 3px rgba(92,22,21,.9),inset 0 0 0 4px rgba(255,221,155,.44);background:rgba(128,30,25,.82);color:var(--gold-light);font-size:20px;line-height:1}
+.brand-mark{width:35px;height:35px;display:grid;place-items:center;border:1px solid rgba(232,198,132,.8);box-shadow:inset 0 0 0 3px rgba(39,34,27,.9),inset 0 0 0 4px rgba(232,198,132,.42);background:rgba(44,39,31,.86);color:var(--gold-light);font-size:20px;line-height:1}
 .brand-copy{display:flex;flex-direction:column;gap:1px;line-height:1.1;font-size:13px;letter-spacing:.25em;white-space:nowrap}
 .brand-copy small{font-family:Georgia,serif;font-size:8px;letter-spacing:.23em;color:var(--gold-light)}
-.masthead-note{margin-left:auto;font-size:10px;letter-spacing:.22em;color:rgba(255,238,208,.86);writing-mode:vertical-rl;white-space:nowrap;text-shadow:0 2px 7px rgba(55,8,10,.8)}
+.masthead-note{margin-left:auto;font-size:10px;letter-spacing:.22em;color:rgba(255,238,208,.86);writing-mode:vertical-rl;white-space:nowrap;text-shadow:0 2px 7px rgba(20,18,15,.8)}
 .screen{min-height:100svh;max-width:1160px;margin:0 auto;padding:110px clamp(24px,6vw,70px) calc(45px + env(safe-area-inset-bottom));display:flex;align-items:flex-end}
 .intro-content{width:min(100%,590px);padding-bottom:clamp(20px,4vh,50px);animation:riseIn .8s both}
-.section-kicker{display:flex;align-items:center;gap:10px;color:var(--gold-light);font-size:11px;letter-spacing:.32em;white-space:nowrap;text-transform:uppercase;text-shadow:0 2px 8px rgba(62,12,13,.7)}
+.section-kicker{display:flex;align-items:center;gap:10px;color:var(--gold-light);font-size:11px;letter-spacing:.32em;white-space:nowrap;text-transform:uppercase;text-shadow:0 2px 8px rgba(18,17,14,.7)}
 .kicker-line{display:inline-block;width:45px;height:15px;background:url("./assets/ruyi-cloud.svg") center/contain no-repeat}
-.intro-content h1{margin:22px 0 18px;font-weight:500;font-size:clamp(53px,12vw,107px);line-height:1.17;letter-spacing:.12em;text-shadow:0 3px 10px rgba(52,8,12,.75),0 9px 28px rgba(52,8,12,.55)}
+.intro-content h1{margin:22px 0 18px;font-weight:500;font-size:clamp(53px,12vw,107px);line-height:1.17;letter-spacing:.12em;text-shadow:0 3px 10px rgba(18,17,14,.75),0 9px 28px rgba(18,17,14,.55)}
 .intro-content h1 em{font-style:normal;color:var(--gold-light)}
 .intro-content p{margin:0 0 36px;font-size:clamp(14px,2.6vw,17px);line-height:2;letter-spacing:.08em;color:rgba(247,240,223,.88)}
-.primary-button{width:min(100%,360px);min-height:57px;border:1px solid rgba(255,216,142,.9);background:linear-gradient(135deg,#c84c32,#a43126 55%,#81241f);color:#fff0cf;display:flex;align-items:center;justify-content:space-between;gap:15px;padding:0 20px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.16em;box-shadow:inset 0 0 0 3px rgba(94,19,18,.28),0 13px 40px rgba(49,7,10,.3);transition:transform .25s,box-shadow .25s,filter .25s}
-.primary-button:hover{transform:translateY(-2px);box-shadow:inset 0 0 0 3px rgba(94,19,18,.28),0 17px 46px rgba(49,7,10,.4);filter:brightness(1.09)}
+.primary-button{width:min(100%,360px);min-height:57px;border:1px solid rgba(235,199,137,.88);background:linear-gradient(135deg,#9f7548,#805a37 55%,#63482f);color:#fff1d5;display:flex;align-items:center;justify-content:space-between;gap:15px;padding:0 20px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.16em;box-shadow:inset 0 0 0 3px rgba(61,44,27,.27),0 13px 40px rgba(15,14,12,.32);transition:transform .25s,box-shadow .25s,filter .25s}
+.primary-button:hover{transform:translateY(-2px);box-shadow:inset 0 0 0 3px rgba(61,44,27,.27),0 17px 46px rgba(15,14,12,.42);filter:brightness(1.09)}
 .primary-button:active{transform:translateY(0)}
 .primary-button:disabled{opacity:.6;cursor:default;transform:none}
 .button-arrow{font-family:Georgia,serif;font-size:25px;font-weight:400;line-height:1}
@@ -32,10 +32,10 @@ button:focus-visible,a:focus-visible,textarea:focus-visible,input:focus-visible{
 .app[data-state="compose"] .intro-screen,.app[data-state="sending"] .intro-screen,.app[data-state="result"] .intro-screen{display:none}
 .app[data-state="compose"] .compose-screen,.app[data-state="sending"] .compose-screen,.app[data-state="result"] .compose-screen{display:flex}
 .compose-content{width:min(100%,480px);margin:0 auto 0 0;animation:riseIn .5s both}
-.compose-heading{margin-bottom:21px;text-shadow:0 2px 5px rgba(49,8,12,.95),0 3px 21px rgba(49,8,12,.95)}
+.compose-heading{margin-bottom:21px;text-shadow:0 2px 5px rgba(20,18,15,.95),0 3px 21px rgba(20,18,15,.95)}
 .compose-heading h2{font-size:clamp(28px,7vw,43px);font-weight:500;letter-spacing:.07em;margin:15px 0 3px}
 .compose-heading p{margin:0;color:rgba(247,240,223,.78);font-size:13px;letter-spacing:.09em;line-height:1.8}
-.letter-form{position:relative;padding:25px 24px 20px;border:1px solid rgba(248,204,132,.62);background:linear-gradient(140deg,rgba(82,23,24,.91),rgba(49,13,17,.95));box-shadow:inset 0 0 0 5px rgba(245,197,122,.06),0 28px 70px rgba(45,5,8,.43);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.letter-form{position:relative;padding:25px 24px 20px;border:1px solid rgba(228,194,134,.55);background:linear-gradient(140deg,rgba(54,48,38,.92),rgba(33,31,26,.96));box-shadow:inset 0 0 0 5px rgba(231,198,142,.05),0 28px 70px rgba(14,13,11,.44);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
 .letter-form::before,.letter-form::after{content:"";position:absolute;width:39px;height:39px;background:url("./assets/ruyi-corner.svg") center/contain no-repeat;pointer-events:none;opacity:.88}
 .letter-form::before{top:5px;left:5px}
 .letter-form::after{right:5px;bottom:5px;transform:rotate(180deg)}
@@ -54,7 +54,7 @@ textarea:focus,input:focus{border-color:var(--gold-light)}
 .site-credit{position:absolute;bottom:calc(13px + env(safe-area-inset-bottom));left:0;right:0;text-align:center;color:rgba(247,240,223,.37);font-size:9px;letter-spacing:.06em;z-index:3}
 .site-credit a{color:inherit;text-underline-offset:3px}
 .app[data-state="result"] .site-credit{display:none}
-.result-overlay{display:none;position:fixed;inset:0;z-index:20;overflow:auto;background:radial-gradient(circle at 50% 4%,#73302a,#351417 47%,#210b0e 100%);padding:calc(22px + env(safe-area-inset-top)) 22px calc(24px + env(safe-area-inset-bottom));}
+.result-overlay{display:none;position:fixed;inset:0;z-index:20;overflow:auto;background:radial-gradient(circle at 50% 4%,#534638,#27241e 47%,#191815 100%);padding:calc(22px + env(safe-area-inset-top)) 22px calc(24px + env(safe-area-inset-bottom));}
 .app[data-state="result"] .result-overlay{display:block;animation:fadeIn .45s both}
 .result-content{max-width:570px;margin:0 auto;text-align:center}
 .result-heading .section-kicker{justify-content:center;font-size:10px}
@@ -76,7 +76,7 @@ textarea:focus,input:focus{border-color:var(--gold-light)}
 .lantern-txt{position:absolute;inset:19px 8px 15px;display:grid;place-items:center;overflow:hidden;text-align:center;color:#552f1d;font-size:10px;line-height:1.2;font-weight:600}
 @keyframes riseIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-@media(min-width:720px){.app{max-width:600px;margin:auto;background:linear-gradient(90deg,rgba(45,8,13,.34),transparent 12%,transparent 88%,rgba(45,8,13,.34))}.masthead{max-width:600px}.screen{max-width:600px;align-items:flex-end}.intro-content{padding-bottom:clamp(20px,4vh,50px)}.compose-screen{align-items:flex-end}.compose-content{padding-top:0}.scene{background-size:auto 100%;background-position:center top}}
+@media(min-width:720px){.app{max-width:600px;margin:auto;background:linear-gradient(90deg,rgba(24,22,18,.34),transparent 12%,transparent 88%,rgba(24,22,18,.34))}.masthead{max-width:600px}.screen{max-width:600px;align-items:flex-end}.intro-content{padding-bottom:clamp(20px,4vh,50px)}.compose-screen{align-items:flex-end}.compose-content{padding-top:0}.scene{background-size:auto 100%;background-position:center top}}
 @media(max-height:700px){.screen{padding-top:95px;padding-bottom:36px}.intro-content h1{font-size:clamp(48px,10vw,84px);margin:12px 0}.intro-content p{margin-bottom:18px}.intro-footnote{margin-top:14px}.compose-heading{margin-bottom:12px}.compose-heading h2{margin:7px 0 2px}.letter-form{padding:17px 19px 15px}textarea{min-height:65px}.signature-row{margin-top:15px}}
 @media(max-width:350px){.masthead-note{display:none}.intro-content h1{font-size:49px}.letter-form{padding:18px}.compose-heading h2{font-size:26px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.lantern{display:none}}
