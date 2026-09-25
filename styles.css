@@ -72,7 +72,7 @@ textarea:focus,input:focus{border-color:var(--gold-light)}
 .lantern-txt{position:absolute;inset:19px 8px 15px;display:grid;place-items:center;overflow:hidden;text-align:center;color:#552f1d;font-size:10px;line-height:1.2;font-weight:600}
 @keyframes riseIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-@media(min-width:720px){.screen{align-items:center}.intro-content{padding-top:38vh;padding-bottom:0}.compose-screen{align-items:center}.compose-content{padding-top:24vh}.scene{background-position:center 42%}}
+@media(min-width:720px){.app{max-width:600px;margin:auto;background:linear-gradient(90deg,rgba(5,12,20,.32),transparent 12%,transparent 88%,rgba(5,12,20,.32))}.masthead{max-width:600px}.screen{max-width:600px;align-items:flex-end}.intro-content{padding-bottom:clamp(20px,4vh,50px)}.compose-screen{align-items:flex-end}.compose-content{padding-top:0}.scene{background-size:auto 100%;background-position:center top}}
 @media(max-height:700px){.screen{padding-top:95px;padding-bottom:36px}.intro-content h1{font-size:clamp(48px,10vw,84px);margin:12px 0}.intro-content p{margin-bottom:18px}.intro-footnote{margin-top:14px}.compose-heading{margin-bottom:12px}.compose-heading h2{margin:7px 0 2px}.letter-form{padding:17px 19px 15px}textarea{min-height:65px}.signature-row{margin-top:15px}}
 @media(max-width:350px){.masthead-note{display:none}.intro-content h1{font-size:49px}.letter-form{padding:18px}.compose-heading h2{font-size:26px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.lantern{display:none}}
